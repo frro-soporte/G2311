@@ -68,25 +68,3 @@ assert terrier.descripcion() == "Soy un perro y tengo 8 años"
 assert dogo.descripcion() == "Soy un perro y tengo 0 años"
 assert cachorro.descripcion() == "Soy un perro y tengo 1 años"
 # NO MODIFICAR - FIN
-
-
-@dataclass
-class Animal:
-    pass # Completar
-
-
-@dataclass
-class Perro(Animal):
-    pass # Completar
-
-
-# NO MODIFICAR - INICIO
-terrier = Perro(edad=8, raza="Yorkshire Terrier")
-cachorro = Perro(edad=1)
-dogo = Perro(raza="Dogo")
-
-assert Animal(10).descripcion() == "Tengo 10 años"
-assert terrier.descripcion() == "Soy un perro y tengo 8 años"
-assert dogo.descripcion() == "Soy un perro y tengo 0 años"
-assert cachorro.descripcion() == "Soy un perro y tengo 1 años"
-# NO MODIFICAR - FIN
