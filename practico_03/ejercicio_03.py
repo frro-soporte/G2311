@@ -58,8 +58,3 @@ class Persona:
 assert Persona("Juan", 18, "H", 85, 175.9).es_mayor_edad()
 assert not Persona("Julia", 16, "M", 65, 162.4).es_mayor_edad()
 # NO MODIFICAR - FIN
-
-# NO MODIFICAR - INICIO
-assert Persona("Juan", 18, "H", 85, 175.9).es_mayor_edad()
-assert not Persona("Julia", 16, "M", 65, 162.4).es_mayor_edad()
-# NO MODIFICAR - FIN
