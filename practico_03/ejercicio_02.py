@@ -10,17 +10,19 @@ class Articulo:
           clase (@classmethod) con una variable de clase
     """
 
-    _last_id : int = 0
-    def __init__(self, nombre : str = "") -> None:
+    _last_id: int = 0
+
+    def __init__(self, nombre: str = "") -> None:
         self.nombre: str = nombre
         self.id_: int = self.get_id()
+
+    def __str__(self):
+        return f"Nombre: {self.nombre}, ID: {self.id_}"
 
     @classmethod
     def get_id(cls):
         cls._last_id += 1
         return cls._last_id
-
-    
 
 
 # NO MODIFICAR - INICIO

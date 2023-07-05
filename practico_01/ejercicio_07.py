@@ -8,7 +8,7 @@ def es_palindromo(palabra: str) -> bool:
     Referencia: https://docs.python.org/3/tutorial/introduction.html#lists
     """
     palindromo = palabra[::-1]
-    return True if palindromo == palabra else False
+    return palindromo == palabra
     
 
 
@@ -32,8 +32,7 @@ def mitad(palabra: str) -> str:
       lon = len(palabra) // 2
     else:
       lon = (len(palabra) + 1) // 2
-    mit = palabra[:lon]
-    return mit
+    return palabra[:lon]
 
 
 # NO MODIFICAR - INICIO

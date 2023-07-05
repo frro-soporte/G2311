@@ -22,10 +22,11 @@ assert es_vocal_if("A")
 
 
 def es_vocal_if_in(letra: str) -> bool:
+    vocales = ("a", "e", "i", "o", "u")
     """Re-escribir utilizando un sólo IF y el operador IN.
     Referencia: https://docs.python.org/3/reference/expressions.html#membership-test-operations
     """
-    return True if True == letra.lower() in ("a","e", "i", "o", "u") else False
+    return True if letra.lower() in vocales else False
 
 
 # NO MODIFICAR - INICIO

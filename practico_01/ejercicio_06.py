@@ -21,7 +21,7 @@ def numeros_al_final_basico(lista: List[Union[float, str]]) -> List[Union[float,
 # NO MODIFICAR - INICIO
 assert numeros_al_final_basico([3, "a", 1, "b", 10, "j"]) == ["a", "b", "j", 3, 1, 10]
 # NO MODIFICAR - FIN
-
+print numeros_al_final_basico([3, "a", 1, "b", 10, "j"])
 
 ###############################################################################
 
@@ -66,7 +66,9 @@ def numeros_al_final_filter(lista: List[Union[float, str]]) -> List[Union[float,
     """CHALLENGE OPCIONAL - Re-escribir utilizando la función filter.
     Referencia: https://docs.python.org/3/library/functions.html#filter
     """
-    pass # Completar
+    numeros = list(filter(lambda x: isinstance(x, int), lista))
+    no_numeros = list(filter(lambda x: not isinstance(x, int), lista))
+    return no_numeros + numeros
 
 
 # NO MODIFICAR - INICIO
@@ -80,7 +82,17 @@ if __name__ == "__main__":
 
 def numeros_al_final_recursivo(lista: List[Union[float, str]]) -> List[Union[float, str]]:
     """CHALLENGE OPCIONAL - Re-escribir de forma recursiva."""
-    pass # Completar
+    # Caso base: la lista está vacía
+    if not lista:
+        return []
+
+    # Verificar el primer elemento de la lista
+    if isinstance(lista[0], int):
+        # Si es numérico, llamamos recursivamente con el resto de la lista y agregamos el primer elemento al final
+        return numeros_al_final_recursivo(lista[1:]) + [lista[0]]
+    else:
+        # Si no es numérico, llamamos recursivamente con el resto de la lista y mantenemos el primer elemento
+        return [lista[0]] + numeros_al_final_recursivo(lista[1:])
 
 
 # NO MODIFICAR - INICIO

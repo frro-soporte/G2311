@@ -11,15 +11,15 @@ class Rectangulo:
 
     # Completar
 
-    def __init__(self, base = None, altura = None):
+    def __init__(self, base: float = 0, altura: float = 0):
         self.base = base
         self.altura = altura
 
+    def __str__(self):
+        return f"Base: {self.base}, Altura: {self.altura}"
 
-
-
-    def area(self):
-        return self.base * self.altura if self.base is not None else 0
+    def area(self) -> float:
+        return self.base * self.altura
 
 
 # NO MODIFICAR - INICIO

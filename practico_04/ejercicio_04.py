@@ -20,7 +20,6 @@ def buscar_persona(id_persona):
     print(res)
     resultado = (idper, nombre, nac, dni, altura)
     print(resultado)
-    conn.commit()
     cur.close()
     conn.close()
 

@@ -22,10 +22,13 @@ class Article:
         return self.name
 
     def __repr__(self) -> str:
-        return f"Articulo('{self.name}')"
+        return f"Article('{self.name}')"
         
     def __eq__(self, other: Article) -> bool:
         return self.name == other.name
+
+    def __hash__(self):
+        return hash(self.name)
 
 # NO MODIFICAR - INICIO
 class ShoppingCart:
@@ -63,6 +66,13 @@ class ShoppingCart:
 
     def __eq__(self, other: ShoppingCart) -> bool:
         return set(self.articles) == set(other.articles)
+
+    def __add__(self, other):
+        if isinstance(other, ShoppingCart):
+            combined_articles = self.articles + other.articles
+            return ShoppingCart(combined_articles)
+        else:
+            raise TypeError("Unsupported operand type for +: ShoppingCart and {}".format(type(other)))
 
 
 # NO MODIFICAR - INICIO

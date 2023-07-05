@@ -33,8 +33,8 @@ assert operacion_basica(1, 0, False) == "Operación no válida"
 
 def operacion_multiple(a: float, b: float, multiplicar: bool) -> Union[float, str]:
     """Re-Escribir utilizando tres returns."""
-    if multiplicar == True : return a*b 
-    elif multiplicar == False and b != 0 : return a/b
+    if multiplicar: return a*b
+    elif not multiplicar and b != 0:  return a/b
     else: return "Operación no válida"
 
 
